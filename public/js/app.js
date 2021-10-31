@@ -11,7 +11,7 @@ form.addEventListener('submit',(e) => {
         mesg2.textContent = '';
 
         const location = search.value;
-        url = `http://localhost:3000/weather?location=${location}`;
+        url = `/weather?location=${location}`;
 
         fetch(url).
         then((res) => {

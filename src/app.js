@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast');
 // <=======>render html file statically<=======>
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const publicPath = path.join(__dirname,'../public');
 const templatePath = path.join(__dirname,'../template/views');
@@ -91,6 +92,6 @@ app.get('*',(req,res) => {
     });
 })
 
-app.listen(3000,() => {
-    console.log('Listing to the 3000 port')
+app.listen(port,() => {
+    console.log(`Listing to the ${port} port`)
 });
