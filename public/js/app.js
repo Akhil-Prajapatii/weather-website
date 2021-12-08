@@ -20,7 +20,8 @@ form.addEventListener('submit',(e) => {
                     mesg1.textContent = data.error
                     mesg2.textContent = '';
                 }else{
-                    mesg1.textContent = data.temperature + `\xB0C`;
+                    // const temp = data.temperature
+                    mesg1.textContent = `Current Temperature - ` + Math.round((data.temperature - 32) * 5/9) + `\xB0C`;
                     mesg2.textContent = data.location         
                 }
             })

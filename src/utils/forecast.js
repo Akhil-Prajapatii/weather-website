@@ -11,7 +11,7 @@ const forecast = (lat,lon,callback) => {
                     callback(undefined,{
                             temperature:res.body.current.temperature,
                             feelslike:res.body.current.feelslike,                                
-                            time:res.body.current.observation_time                                
+                            time:res.body.location.localtime                                
                     })
             }
     })
